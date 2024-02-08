@@ -1,0 +1,120 @@
+<body>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="<%=_id%>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upadate Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <label for="title">Title</label>
+                    <br>
+                    <input value="<%=title %>" type="text" data-titleId="<%=_id %>" name="title" id="title"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="author">author</label>
+                    <br>
+                    <input value="<%=author %>" type="text"  data-authorId="<%=_id %>" name="author" id="author"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="genre">genre</label>
+                    <br>
+                    <input value="<%=genre %>" type="text"  data-genreId="<%=_id %>" name="genre" id="genre"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="published_year">published_year</label>
+                    <br>
+                    <input value="<%=published_year %>" type="text"  data-publishedYearId="<%=_id %>" name="published_year" id="published_year"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="isbn">isbn</label>
+                    <br>
+                    <input value="<%=isbn %>" type="text"  data-isbnId="<%=_id %>" name="isbn" id="isbn"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="price">price</label>
+                    <br>
+                    <input value="<%=price %>" type="text"  data-priceId="<%=_id %>" name="price" id="price"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="stock_quantity">stock_quantity</label>
+                    <br>
+                    <input value="<%=stock_quantity %>" type="text"  data-stockQuantityId="<%=_id %>" name="stock_quantity" id="stock_quantity"  >
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btn-primary" onclick="UpdateHandler('<%=_id%>')" >Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- model2> -->
+
+  <div class="modal fade" id="open" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Upadate Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-12 mb-2">
+                    <label for="title">Title</label>
+                    <br>
+                    <input type="text" data-titleId="" name="title" id="title1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="author">author</label>
+                    <br>
+                    <input type="text"  data-authorId="" name="author" id="author1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="genre">genre</label>
+                    <br>
+                    <input  type="text"  data-genreId="" name="genre" id="genre1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="published_year">published_year</label>
+                    <br>
+                    <input type="text"  data-publishedYearId="" name="published_year" id="published_year1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="isbn">isbn</label>
+                    <br>
+                    <input  type="text"  data-isbnId="" name="isbn" id="isbn1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="price">price</label>
+                    <br>
+                    <input  type="text"  data-priceId="" name="price" id="price1"  >
+                </div>
+                <div class="col-12 mb-2">
+                    <label for="stock_quantity">stock_quantity</label>
+                    <br>
+                    <input  type="text"  data-stockQuantityId="" name="stock_quantity" id="stock_quantity1"  >
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btn-primary" onclick="AddUser()" >Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

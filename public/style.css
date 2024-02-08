@@ -1,0 +1,25 @@
+table{
+    border: 1px solid black;
+}
+tr, td{
+    border: 2px solid black;
+}
+th{
+    font-size: 20px;
+    border: 2px solid black;
+   text-align: center;
+}
+input{
+    width: 100%;
+    outline: none;
+    padding:0.5rem 1rem;
+}
+label{
+    font-size: 17px;
+    font-weight: 500;
+}
+.add{
+    margin-left: 200px;
+    height: 50px;
+    font-size: 20px;
+}

@@ -1,0 +1,80 @@
+<%- include("layout") %>
+
+  <body>
+    <div class="container-fluid pt-5">
+      <div class="row ">
+        <div class="col-8 ps-5">
+          <h1>Book Store Details</h1>
+        </div>
+        
+        <div class="col-4 ps-5">
+          <button type="button" class="btn btn-primary w-50  add" data-bs-toggle="modal" data-bs-target="#open" >
+            Add Details
+          </button></div>
+      </div>
+      <div class="row">
+        <table class="table mt-4 table-striped">
+          <thead>
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">title</th>
+              <th scope="col">author</th>
+              <th scope="col">genre</th>
+              <th scope="col">published_year</th>
+              <th scope="col">isbn</th>
+              <th scope="col">price</th>
+              <th scope="col">quantity</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% let i=0; while (i<data.length) {%>
+              <tr>
+                <td>
+                  <%=i+1%>
+                </td>
+                <td>
+                  <%=data[i].title%>
+                </td>
+                <td>
+                  <%=data[i].author%>
+                </td>
+                <td>
+                  <%=data[i].genre%>
+                </td>
+                <td>
+                  <%=data[i].published_year%>
+                </td>
+                <td>
+                  <%=data[i].isbn%>
+                </td>
+                <td>
+                  <%=data[i].price%>
+                </td>
+                <td>
+                  <%=data[i].stock_quantity%>
+                </td>
+                <td>
+                  <%- include("./component/form.ejs",{_id:'id'+data[i]._id,title:data[i].title, author:
+                    data[i].author,genre: data[i].genre,published_year:data[i].published_year,isbn:data[i].isbn,
+                    price:data[i].price, stock_quantity:data[i].stock_quantity}) %>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                      data-bs-target="<%='#id'+data[i]._id%>">
+                      Update
+                    </button>
+                    <button class="btn btn-danger" onclick="DeleteHandler('<%= data[i]._id%>')">Delete</button>
+                </td>
+
+              </tr>
+
+              <% i++} %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="../public/main.js"></script>
+  </body>
+
+  </html>
